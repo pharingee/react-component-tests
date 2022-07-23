@@ -11,6 +11,8 @@ const PhoneNumberEntry = () => {
       window.navigator.clipboard.readText().then((text) => {
         if (!isNaN(parseInt(text))) {
           setClipText(text);
+        } else {
+          setClipText('');
         }
       });
     }, 500);
